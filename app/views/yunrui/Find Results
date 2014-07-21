@@ -1,0 +1,124 @@
+Searching 447 files for "Helvetica Neue"
+
+/Rails/yunrui_guru/app/assets/stylesheets/base/_typography.scss:
+    1  @import "theme";
+    2  $blockquote: $type-border !default;
+    3: $sans: "Helvetica Neue", Arial, sans-serif !default;
+    4  $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
+    5  $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
+    6: $heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+    7  $header-title-font-family: $heading-font-family !default;
+    8  $header-subtitle-font-family: $heading-font-family !default;
+
+/Rails/yunrui_guru/app/assets/stylesheets/custom/_styles.scss:
+  256  
+  257  h1.entry-title {
+  258: 	font-family: 'Helvetica Neue', sans-serif;
+  259  	font-weight: 100;
+  260  }
+
+/Rails/yunrui_guru/app/assets/stylesheets/partials/_syntax.scss:
+  247    color: #333;
+  248    margin-bottom: 0;
+  249:   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
+  250    font-weight: 100;
+  251    border: 1px solid #ccc;
+
+/Rails/yunrui_guru/vendor/assets/javascripts/Readmore/demo.html:
+   17  
+   18    <style media="screen">
+   19:     body { font: 16px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; color: #444; }
+   20      code { color: #777; font-family: "Source Code Pro", "Menlo", "Courier New", monospace;}
+   21      a { color: #178DB1; }
+
+5 matches across 4 files
+
+
+Searching 447 files for "Amethysta"
+
+/Rails/yunrui_guru/app/assets/stylesheets/custom/_styles.scss:
+    7  
+    8  body {
+    9: 	font-family:'Amethysta', serif;
+   10  	font-weight:300;
+   11  	font-size:18px;
+   ..
+   17  
+   18  	 h2, h3, h4, h5 {
+   19: 		font-family: 'Amethysta', serif;
+   20  		font-weight: 100;
+   21  	}
+   ..
+   30  		padding-top: 2em;
+   31  		padding-bottom: 2em;
+   32: 		font-family: 'Amethysta', serif;
+   33  		font-weight: 100;
+   34  		text-align: center;
+   ..
+   73  
+   74  		a {
+   75: 				font-family: 'Amethysta', serif;
+   76             		text-decoration: none;
+   77  				text-shadow: none;
+   ..
+   81          	}
+   82  		form .search {
+   83: 			font-family: 'Amethysta', serif;
+   84  			font-weight: 100;
+   85  			border-radius: 0.2em 0.2em 0.2em 0.2em;
+   ..
+  122  		padding-right: 0px;
+  123  		font-size: 14px;
+  124: 		font-family: 'Amethysta', serif;
+  125  		font-weight: 100;
+  126  	}
+  ...
+  139  				padding-top: 2.3em;
+  140  				h1, h2, h3, h4, h5 {
+  141: 					font-family: 'Amethysta', serif;
+  142  					font-weight: 100;
+  143  				}
+  ...
+  195  		h1 { // Post Title
+  196  			a {
+  197: 				font-family: 'Amethysta', serif;
+  198  				font-weight: 100;
+  199  				font-size: 1.25em;
+  ...
+  207  
+  208  		time {
+  209: 			font-family: 'Amethysta', serif;
+  210  			font-weight: 100;
+  211  			letter-spacing: 1px;
+  ...
+  216  	.hentry {
+  217  		h1.entry-title {
+  218: 			font-family: 'Amethysta', serif;
+  219  			font-weight: 100;
+  220  			font-size: 2.75em;		
+  ...
+  222  
+  223  		time {
+  224: 			font-family: 'Amethysta', serif;
+  225  			font-weight: 100;
+  226  			letter-spacing: 1px;
+  ...
+  262  #blog-archives {
+  263  	h2 {
+  264: 		font-family: 'Amethysta', serif;
+  265  		font-weight: 100;
+  266  	}
+  ...
+  270  			a, a:hover {
+  271  				margin-left: 2.0em;	
+  272: 				font-family: 'Amethysta', serif;
+  273  				font-weight: 100;
+  274  				text-decoration: none;
+  ...
+  277  
+  278  		time {
+  279: 			font-family: 'Amethysta', serif;
+  280  			font-weight: 100;
+  281  			font-size: 0.9em;
+
+14 matches in 1 file

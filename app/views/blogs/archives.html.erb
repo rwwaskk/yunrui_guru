@@ -1,0 +1,30 @@
+<div>
+<article role="article">
+<header>
+    <h1 class="entry-title">Blog Archive</h1>
+ </header>
+  
+  <div id="blog-archives">
+		<%@year_hash.each do |year,blogs|%>
+		<h2><%=year%></h2>
+
+		
+  		<%blogs.each do |blog|%>
+  		<article>
+  			<h1>
+  			<a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=blog.title-%>"><%=blog.title%></a>
+  			</h1>
+			
+			<time datetime="<%=blog.created_at-%>" pubdate><span class='month'><%=Date::MONTHNAMES[blog.created_at.month]%></span><span class='day'><%=blog.created_at.day%></span><span class='year'><%=blog.created_at.year%></span></time>
+
+		</article>
+		<%end%>
+
+<%end%>
+
+  
+
+
+
+
+</div>

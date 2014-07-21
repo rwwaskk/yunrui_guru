@@ -1,0 +1,2 @@
+module YunruiHelper
+end

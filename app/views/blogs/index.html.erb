@@ -1,0 +1,26 @@
+<div class="blog-index">
+  <%=render @blogs%>
+</div>
+   
+
+  <div class="pagination">    
+      <!--a class="prev" href="/blog/page/2/">&larr; Older</a-->
+    <a href="/blog/archives">Blog Archives</a>
+  </div>
+
+
+
+<%if god_signed_in?%>
+<%= link_to 'New Blog', new_blog_path %>
+<%end%>
+
+
+<script>
+$(function(){
+console.log('?');
+$('.entry-content').readmore({
+	maxHeight: 240,
+	moreLink: '<a href="#">Read on &rarr;</a>'
+	});
+});
+</script>
