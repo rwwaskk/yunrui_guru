@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
+<article>  
+      <header>
+        <h1 class="entry-title"><%= @blog.title %>
+        	</h1>
+        <p class="meta">
+          <%=time_tag  @blog.created_at,:format=>"%B %d, %Y"%>        
+      </p>
+  </header>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
 </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
-</p>
+<div class="entry-content">
+  
+  <%= @blog.content.html_safe %>
+ </div>
 
+<%if god_signed_in?%>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+<%end%>
