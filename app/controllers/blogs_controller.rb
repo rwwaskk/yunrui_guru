@@ -80,6 +80,12 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy
+       if params[:id].nil?
+      puts 'id is null>>>>>>>>>>>'
+      @blog=set_blog()
+    else
+      @blog=Blog.find(params[:id])
+    end
     @blog.destroy
     respond_to do |format|
       format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
