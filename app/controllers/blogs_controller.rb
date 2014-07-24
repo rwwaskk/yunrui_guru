@@ -90,7 +90,8 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
-      @blogs = Blog.where(:title=>params[:title])
+      slug_back=params[:title].gsub('-', ' ')
+      @blogs = Blog.where(:title=>slug_back)
       if @blogs.count>=1
         @blog=@blogs.first
       else
