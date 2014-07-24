@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  #before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_god!, 
               :only => [:new, :edit, :create, :update, :destroy]
 
