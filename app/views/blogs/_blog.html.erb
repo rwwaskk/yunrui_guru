@@ -1,6 +1,7 @@
  <article>  
       <header>
-        <h1 class="entry-title"><a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=blog.title-%>"><%=blog.title%></a></h1>
+        <%slug = blog.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')%>
+        <h1 class="entry-title"><a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=slug-%>"><%=blog.title%></a></h1>
         <p class="meta">
           <%=time_tag  blog.created_at,:format=>"%B %d, %Y"%>        
       </p>
