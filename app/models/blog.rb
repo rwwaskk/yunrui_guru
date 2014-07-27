@@ -1,4 +1,8 @@
 class Blog < ActiveRecord::Base
+	
+	#relationships
+	has_many :blog_images
+	
 	def self.get_years
 
 		years_hash={}

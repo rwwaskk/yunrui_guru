@@ -41,7 +41,16 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'devise'
 gem "font-awesome-rails"
+
+#for archives
 gem 'by_star', :git => "git://github.com/radar/by_star"
+
+#ckeditor
+gem 'ckeditor'
+
+#for image upload
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

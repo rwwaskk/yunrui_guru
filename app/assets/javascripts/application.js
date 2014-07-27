@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require Readmore/readmore
+//= require ckeditor/init
 //= require_tree .
