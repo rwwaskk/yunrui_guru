@@ -5,16 +5,14 @@
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       <link rel="stylesheet" type="text/css" href="chrome-extension://pkehgijcmpdhfbdbbnkijodmdjhbjlgp/skin/socialwidgets.css">
-  <%= csrf_meta_tags %>
-  <meta name="keywords" content="ruby on rails, ruby,rails">
-  <meta name="keywords" content="tutorial,guide">
-  <meta name="keywords" content="Jquery, javascript">
-  <meta name="keywords" content="java, objective-c,swift">
- 
+      <%= csrf_meta_tags %>
+      <meta name="keywords" content="ruby on rails, ruby,rails">
+      <meta name="keywords" content="tutorial,guide">
+      <meta name="keywords" content="Jquery, javascript">
+      <meta name="keywords" content="java, objective-c,swift">
+  </head>
 
 
-
-</head>
 <body>
 <header role="banner">
   <p class="notice"><%= notice %></p>
@@ -29,12 +27,16 @@
   		<li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"></a></li>
 	</ul>
   
-<form action="http://google.com/search" method="get">
+<!--form action="http://google.com/search" method="get">
   <fieldset role="search">
+
     <input type="hidden" name="q" value="site:yunrui.guru" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
-</form>
+</form-->
+<ul style="float:right">
+<li > <%=link_to 'PseudoRandom',yunrui_rand_path%></li>
+</ul>
   
 <ul class="main-navigation">
   <li><%=link_to 'About',root_path%></li>

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'yunrui/projects'
 
+  get 'yunrui/rand'
+
 
   get 'blog/:year/:month/:day/:title'=>'blogs#show'
   get 'blog/archives'=>'blogs#archives'

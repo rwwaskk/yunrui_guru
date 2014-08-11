@@ -10,4 +10,7 @@ class YunruiController < ApplicationController
 
   def projects
   end
+
+  def rand
+  end
 end
