@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get 'yunrui/projects'
 
   get 'yunrui/rand'
+  get 'yunrui/philosophy'
+  get 'yunrui/art'
+  get 'yunrui/physics'
 
 
   get 'blog/:year/:month/:day/:title'=>'blogs#show'

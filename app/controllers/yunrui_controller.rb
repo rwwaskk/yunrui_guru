@@ -13,4 +13,13 @@ class YunruiController < ApplicationController
 
   def rand
   end
+
+  def philosophy
+  end
+
+  def art
+  end
+
+  def physics
+  end
 end

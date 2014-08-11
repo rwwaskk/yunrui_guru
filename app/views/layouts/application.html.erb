@@ -10,6 +10,27 @@
       <meta name="keywords" content="tutorial,guide">
       <meta name="keywords" content="Jquery, javascript">
       <meta name="keywords" content="java, objective-c,swift">
+     <script>
+     $(document).on('page:change' ,function(){
+          $('a#dropdown').click(function(){
+           $('ul#dropdown').toggle();
+            return false;
+          });
+        });
+     </script>
+     <style>
+     li.dropdown{
+      display: block;
+      position: relative;
+
+     }
+     ul#dropdown{
+      display:none;
+      position:absolute;
+      z-index:100;
+    }
+     </style>
+
   </head>
 
 
@@ -21,11 +42,11 @@
 	<br><div class="header-subtitle">A coding particle</div>
   <!--Life is a just simple wish playing hard-to-get-->
 </header>
+
   <nav role="navigation">
-  	
-  	<ul class="subscription" data-subscription="rss">
+  	<!--ul class="subscription" data-subscription="rss">
   		<li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"></a></li>
-	</ul>
+	</ul-->
   
 <!--form action="http://google.com/search" method="get">
   <fieldset role="search">
@@ -34,9 +55,20 @@
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form-->
-<ul style="float:right">
-<li > <%=link_to 'PseudoRandom',yunrui_rand_path%></li>
+<ul  id="drop-nav" class="dropdown" style="float:right">
+  <!--li><%#=link_to 'PseudoRandom',yunrui_rand_path%></li-->
+  <li >
+    <a id="dropdown" href="#"> PseudoRandom</a><br>
+    <ul id="dropdown">
+      <li class="dropdown" style="float:none;margin-top:15px;"><%=link_to 'art',yunrui_art_path%></li><br>
+      <li class="dropdown" style="float:none"><%=link_to 'philosophy',yunrui_philosophy_path%></li><br>
+      <li class="dropdown" style="float:none"><%=link_to 'physics',yunrui_physics_path%></li><br>
+      <li class="dropdown" style="float:none"><%=link_to 'TruelyRandom',yunrui_rand_path%></li><br>
+    </ul >
+  </li>
 </ul>
+
+
   
 <ul class="main-navigation">
   <li><%=link_to 'About',root_path%></li>
@@ -45,6 +77,9 @@
   <li><%#=link_to 'Back Door', new_god_registration_path%></li>
 </ul>
 </nav>
+  
+
+
   <div id="main">
     <div id="content" style="width:100%">
      	<%= yield %>
