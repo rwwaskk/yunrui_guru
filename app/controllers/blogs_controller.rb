@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
-  #before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_god!, 
-              :only => [:new, :edit, :create, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  #before_filter :authenticate_god!, 
+   #           :only => [:new, :edit, :create, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
@@ -17,13 +17,6 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    
-    if params[:id].nil?
-      puts 'id is null>>>>>>>>>>>'
-      @blog=set_blog()
-    else
-      @blog=Blog.find(params[:id])
-    end
   end
 
   # GET /blogs/new
@@ -33,12 +26,6 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
-    if params[:id].nil?
-      puts 'id is null>>>>>>>>>>>'
-      @blog=set_blog()
-    else
-      @blog=Blog.find(params[:id])
-    end
   end
 
   # POST /blogs
@@ -96,13 +83,7 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
-      slug_back=params[:title].gsub('-', ' ')
-      @blogs = Blog.where(:title=>slug_back)
-      if @blogs.count>=1
-        @blog=@blogs.first
-      else
-        puts 'sorry, this blog has been removed'
-      end
+      @blog=Blog.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -52,6 +52,13 @@ gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 
+
+#clean url
+gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+
+#save to seed
+gem 'seed_dump'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

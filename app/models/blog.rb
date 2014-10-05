@@ -1,4 +1,7 @@
 class Blog < ActiveRecord::Base
+
+	extend FriendlyId
+	friendly_id :title,use: :slugged
 	
 	#relationships
 	has_many :blog_images

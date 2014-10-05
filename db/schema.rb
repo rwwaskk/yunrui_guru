@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(version: 20140727011149) do
   create_table "blogs", force: true do |t|
     t.string   "title"
     t.text     "content"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "blog_image"
   end
+
+  add_index "blogs", ["slug"], name: "index_blogs_on_slug", unique: true
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
