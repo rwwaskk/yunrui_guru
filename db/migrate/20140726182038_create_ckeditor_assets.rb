@@ -1,3 +1,4 @@
+=begin
 class CreateCkeditorAssets < ActiveRecord::Migration
   def self.up
     create_table :ckeditor_assets do |t|
@@ -24,3 +25,4 @@ class CreateCkeditorAssets < ActiveRecord::Migration
     drop_table :ckeditor_assets
   end
 end
+=end
