@@ -1,7 +1,10 @@
  <article>  
       <header>
         <%slug = blog.title.gsub(' ', '-')%>
-        <h1 class="entry-title"><a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=slug-%>"><%=blog.title%></a></h1>
+        <h1 class="entry-title">
+
+<%=link_to blog.title, blog_path(blog)%>
+          <!--a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=slug-%>"><%=blog.title%></a--></h1>
         <p class="meta">
           <%=time_tag  blog.created_at,:format=>"%B %d, %Y"%>        
       </p>
@@ -10,7 +13,8 @@
     <%=blog.content.html_safe%>
 
     
-<a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=slug-%>">To leave a comment, please go to this blog's own page :)</a>
+<!--a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=slug-%>">To leave a comment, please go to this blog's own page :)</a-->
+<%=link_to blog.title, blog_path(blog)%>
   </div>
 
   

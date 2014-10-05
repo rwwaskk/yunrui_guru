@@ -21,7 +21,6 @@ Rails.application.routes.draw do
   get 'yunrui/physics'
 
 
-  get 'blog/:year/:month/:day/:title'=>'blogs#show'
   get 'blog/archives'=>'blogs#archives'
 
   #mount Ckeditor::Engine => '/ckeditor'
