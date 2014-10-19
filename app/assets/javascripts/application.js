@@ -18,3 +18,11 @@
 //= require prism/prism
 //= require ckeditor/init
 //= require_tree .
+
+
+$(document).on('page:load' ,function(){
+	$('a#dropdown').click(function(){
+    $('ul#dropdown').toggle();
+    	return false;
+     });
+});
