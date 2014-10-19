@@ -1,0 +1,1 @@
+CKEDITOR.config.allowedContent = true; 
