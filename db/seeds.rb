@@ -1,0 +1,1 @@
+God.create!(:email=>'yunrui@unary.io',:password=>'thereisonlyonegod')
