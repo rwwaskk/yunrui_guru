@@ -13,12 +13,20 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title ,:cols=>50%>
   </div>
   <div class="field">
     <%= f.label :content %><br>
     <%= f.cktext_area :content %>
   </div>
+
+  <div class="field">
+
+  <%= f.radio_button :draft, 0, :checked => true %> 
+  <%= label :blog_public, 'Public' %>
+  <%= f.radio_button :draft, 1 %>
+  <%= label :blog_draft, 'Draft' %>
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>

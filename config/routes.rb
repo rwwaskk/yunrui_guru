@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
 
   get 'blog/archives'=>'blogs#archives'
+  get 'blog/draft'=>'blogs#draft'
 
   #mount Ckeditor::Engine => '/ckeditor'
   # The priority is based upon order of creation: first created -> highest priority.

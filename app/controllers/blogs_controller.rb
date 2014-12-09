@@ -6,7 +6,12 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.last(3).reverse
+    @blogs = Blog.published.last(3).reverse
+  end
+
+  def draft
+    @blogs = Blog.draft.last(3).reverse
+    render :action=>'index'
   end
 
 
@@ -82,6 +87,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :content)
+      params.require(:blog).permit(:title, :content,:draft)
     end
 end
