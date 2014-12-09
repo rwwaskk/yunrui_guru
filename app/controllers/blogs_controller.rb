@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
 
 
   def archives
-    @year_hash = Blog.get_years
+    @year_hash = Blog.published.get_years
   end
 
   # GET /blogs/1
