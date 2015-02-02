@@ -8,7 +8,7 @@
   <div class="entry-content"><%= @blog.content.html_safe %></div>
   <hr>
   <%@blog.tags.each do |tag|%>
-    <a href='#'><%=tag.name%></a>
+    <a href='/tags/<%=tag.name%>'><%=tag.name%></a>
   <%end%>
   
   <%if god_signed_in?%>

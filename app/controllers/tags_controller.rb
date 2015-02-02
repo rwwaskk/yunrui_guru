@@ -1,5 +1,6 @@
 class TagsController < ApplicationController
-	def create_tags
-		Tag.create_tags(params[:tags_string])
+	def show
+		@tag=Tag.find_by_name(params[:name])
+		@blogs = @tag.blogs
 	end
 end

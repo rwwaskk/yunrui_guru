@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get 'blog/draft'=>'blogs#draft'
 
 
-  post '/create_tags'=>'tags#create_tags'
+  get '/tags/:name'=>'tags#show'
 
   #mount Ckeditor::Engine => '/ckeditor'
   # The priority is based upon order of creation: first created -> highest priority.

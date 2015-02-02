@@ -1,0 +1,20 @@
+
+<% content_for :title, 'Blogs' %>
+
+<div class="blog-index">
+  <%=render @blogs%>
+</div>
+ <div class="pagination">    
+ <!--a class="prev" href="/blog/page/2/">&larr; Older</a-->
+ <a href="/blog/archives">Blog Archives</a>
+ </div>
+
+<script>
+$(function(){
+console.log('?');
+$('.entry-content').readmore({
+	maxHeight: 240,
+	moreLink: '<a href="#">Read on &rarr;</a>'
+	});
+});
+</script>

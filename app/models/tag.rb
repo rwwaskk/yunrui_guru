@@ -1,16 +1,8 @@
 class Tag < ActiveRecord::Base
 
-	has_many :create_blog_tag_relationship
+	has_many :blog_tag_relationships
+	has_many :blogs, through: :blog_tag_relationships
 	
-	after_save :create_blog_tag_relationship
-	def self.create_tags(tags_array)
-		tags_array.each do |name| 
-			Tag.create!(:name=>name)
-		end
-	end
-
-	def create_blog_tag_relationship
-		BlogTagRelationship.create!(:tag_id=>self.id,:blog_id=>1)
-	end
+	
 end
 

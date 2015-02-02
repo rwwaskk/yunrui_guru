@@ -3,10 +3,8 @@ class Blog < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :title,use: :slugged
 	
-	 scope :published, -> { where(draft: 0) }
-	 scope :draft, -> { where(draft: 1) }
-
-	#scope :draft, -> { where (draft: 1)}
+	scope :published, -> { where(draft: 0) }
+	scope :draft, -> { where(draft: 1) }
 	
 	#relationships
 	has_many :blog_images
