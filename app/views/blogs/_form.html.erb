@@ -19,9 +19,11 @@
     <%= f.label :content %><br>
     <%= f.cktext_area :content %>
   </div>
-
+  <div class='field'>
+    <%=f.label :tags_string%>
+    <%=f.text_field :tags_string%>
+  </div>
   <div class="field">
-
   <%= f.radio_button :draft, 0, :checked => true %> 
   <%= label :blog_public, 'Public' %>
   <%= f.radio_button :draft, 1 %>

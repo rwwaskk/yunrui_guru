@@ -59,6 +59,10 @@ gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 #save to seed
 gem 'seed_dump'
 
+#use rspec for unit testing
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

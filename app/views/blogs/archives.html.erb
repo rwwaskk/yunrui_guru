@@ -12,7 +12,9 @@
   		<%blogs.each do |blog|%>
   		<article>
   			<h1>
-  			<a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=blog.title-%>"><%=blog.title%></a>
+  			<!--a href="/blog/<%=blog.created_at.year-%>/<%=blog.created_at.month-%>/<%=blog.created_at.day-%>/<%=blog.title-%>"><%=blog.title%></a-->
+  			<%=link_to blog.title, blog_path(blog)%>
+
   			</h1>
 			
 			<time datetime="<%=blog.created_at-%>" pubdate><span class='month'><%=Date::MONTHNAMES[blog.created_at.month]%></span><span class='day'><%=blog.created_at.day%></span><span class='year'><%=blog.created_at.year%></span></time>

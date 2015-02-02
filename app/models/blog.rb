@@ -10,6 +10,26 @@ class Blog < ActiveRecord::Base
 	
 	#relationships
 	has_many :blog_images
+
+
+	#many-to-many relationship with tag
+	has_many :blog_tag_relationships
+	has_many :tags, through: :blog_tag_relationships,source: :tag
+
+ 	attr_writer :tags_string
+ 	attr_accessor :tags_string
+	after_save :assign_tags
+
+
+	private
+	def assign_tags
+	 if @tags_string
+	      self.tags = @tags_string.split(',').map do |name|
+	        Tag.find_or_create_by(name: name)
+	      end
+	    end
+	end
+
 	
 	def self.get_years
 
